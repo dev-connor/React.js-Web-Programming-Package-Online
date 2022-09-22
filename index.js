@@ -8,11 +8,11 @@ function helloWorldButton () {
     const [isClick, setClickState] = React.useState(false)
     const text = isClick ? "Bye world!" : "Hello world!"
     
-    return React.createElement(
-        "button", 
-        {onClick: () => setClickState(!isClick)}, 
-        text
-        )
+    return (
+      <button onClick={() => setClickState(!isClick)}>
+        {text}
+      </button>
+    )
 }
 
 const rootContainer = document.getElementById('react-root')
