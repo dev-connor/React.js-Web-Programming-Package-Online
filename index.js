@@ -12,4 +12,5 @@ function helloWorldButton () {
         )
 }
 
-
+const rootContainer = document.getElementById('react-root')
+ReactDOM.render(React.createElement(helloWorldButton), rootContainer)
