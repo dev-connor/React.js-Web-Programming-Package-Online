@@ -6,22 +6,15 @@ function helloWorldButton () {
 
     // 비 구조화 할당
     const [isClick, setClickState] = React.useState(false)
+    const text = isClick ? "Bye world!" : "Hello world!"
     
     return React.createElement(
         "button", 
-        {onclick: () => {
-            
-        }},
-        "Hello world!"
+        {onClick: () => setClickState(!isClick)}, 
+        text
         )
 }
 
 const rootContainer = document.getElementById('react-root')
 ReactDOM.render(React.createElement(helloWorldButton), rootContainer)
 
-function returnOneThreeArray() {
-    return [1, 3]
-}
-
-const [a, b] = returnOneThreeArray()
-const [a, b] = [1, 3]
